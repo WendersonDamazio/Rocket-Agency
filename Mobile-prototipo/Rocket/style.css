@@ -121,7 +121,7 @@ input:hover {
 .habilidades .card-box {
   margin-top: 5%;
   margin-bottom: 5%;
-  background-color: transparent;
+  background:#ffffff05;
   position: absolute;
   margin-top: 5%;
   left: 50%;
@@ -131,6 +131,6 @@ input:hover {
   transform: translate(-50%, -50%);
   border-radius: 15px;
   backdrop-filter: blur(3px);
-  border: 1px solid  #ffffff00;
+  border: 1px solid  #ffffff15;
   box-shadow: 0px 0px 10px 0px #0000007a
 }
