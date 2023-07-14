@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
   font-family: FilsonProRegular;
+  text-decoration: none;
+  list-style: none;
+}
+main {
+  position: absolute;
+  z-index: 1;
 }
 @font-face {
   font-family: "FilsonProRegular";
@@ -19,16 +25,41 @@ body {
   background-color: #090811;
   overflow-x: hidden;
 }
+header {
+  padding: 3% 2% 2% 3%;
+}
 header ul {
-  justify-content: end;
+  justify-content: space-between;
   display: flex;
 }
-header ul i {
+.logo li a {
+  font-size: 20px;
+  color: #fff;
+  list-style: none;
+  background: #3e01a7;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.nav {
+  display: flex;
+}
+.nav li a {
+  margin: 30px;
+  color: #fff;
+}
+.nav a:hover {
+  border-radius: 5px;
+  background: #3e01a743;
+  box-shadow: 0px 0px 50px 1px #4c00ce;
+}
+#menu {
+  display: none;
   color: #fff;
   font-size: 2rem;
   margin: 2%;
 }
-.apresenta2 .circulo {
+.effect .circulo {
   position: absolute;
   width: 1200px;
   min-width: 1200px;
@@ -39,7 +70,7 @@ header ul i {
   width: 100%;
   min-width: 900px;
 }
-.apresenta2 .linhas {
+.effect .linhas {
   position: absolute;
   z-index: 0;
   opacity: 0.1;
@@ -62,13 +93,13 @@ header ul i {
 }
 .apresenta p {
   font-family: FilsonProBook;
-  font-size: 1.rem;
+  font-size: 1rem;
   padding: 10px;
   z-index: 1;
 }
 input {
   color: #fff;
-  background-image: linear-gradient(45deg, #3e01a7, #eb78c7, #3e01a7, #eb78c7);
+  background-image: linear-gradient(45deg, #3e01a7, #a24ce9, #3e01a7, #eb78c7);
   background-size: 400% 200%;
   transition: background 1.6s cubic-bezier(0.55, 0.1, 0.47, 0.94) 0s;
   border-top: none;
@@ -81,7 +112,7 @@ input {
   transition: ease-out 0.5s;
   box-shadow: 0 10px 20px -5px #3e01a7ad;
   animation: animate-gradient 5s linear infinite;
-  margin-top: 14%;
+  margin-top: 12%;
   margin-left: 4%;
   position: absolute;
   cursor: pointer;
@@ -106,7 +137,7 @@ input:hover {
     transform: rotate(360deg);
   }
 }
-section{
+section {
   padding: 3%;
   margin-top: 340px;
 }
@@ -115,16 +146,29 @@ section{
   font-family: FilsonProBold;
   font-size: 2rem;
 }
+.cards {
+  display: flex;
+}
 .card-box {
-  background:#ffffff05;
-  width: 100%;
-  height: 140px;
+  background: #ffffff05;
+  width: 33%;
+  margin: 0 1% 0 0;
   border-radius: 15px;
   backdrop-filter: blur(3px);
-  border: 1px solid  #5d00ff;
-  box-shadow: 0px 0px 15px 0px #3e01a7
+  border: 1px solid #ffffff0f;
+  box-shadow: 0px 0px 10px 0px #000000;
 }
-.card-box p{
+.card-box p {
   color: #fff;
   padding: 7px;
+}
+.card-box h4 {
+  color: #fff;
+  padding: 7px;
+  font-size: 20px;
+}
+.projetos h1 {
+  color: #fff;
+  font-family: FilsonProBold;
+  font-size: 2rem;
 }
