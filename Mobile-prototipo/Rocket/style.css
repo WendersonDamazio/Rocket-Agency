@@ -16,62 +16,52 @@
   src: url("fonts/FilsonProBook.otf");
 }
 body {
-  background-color: #0f0f17;
+  background-color: #090811;
+  overflow-x: hidden;
 }
-.apresenta header ul {
+header ul {
   justify-content: end;
   display: flex;
 }
-.apresenta header ul i {
+header ul i {
   color: #fff;
   font-size: 2rem;
   margin: 2%;
 }
-.apresenta .circulo {
+.apresenta2 .circulo {
   position: absolute;
   width: 1200px;
   min-width: 1200px;
   z-index: 0;
   animation: girandoCirculo 20s linear infinite;
-  top: -300px;
-  left: -500px;
-  width: 900px;
+  top: -800px;
+  left: -700px;
+  width: 100%;
   min-width: 900px;
 }
-.apresenta .linhas {
+.apresenta2 .linhas {
   position: absolute;
-  width: 2000px;
-  min-width: 2000px;
-  z-index: 1;
-  top: 0;
+  z-index: 0;
+  opacity: 0.1;
+  width: 100%;
   left: 0;
-  opacity: 0.01;
-  width: 1500px;
-  min-width: 1500px;
-  transform: rotate(90deg);
-  left: -600px;
   top: 50px;
 }
 .apresenta {
   font-family: FilsonProRegular;
   color: #fff;
+  position: absolute;
+  left: 3%;
 }
 .apresenta h2 {
-  position: absolute;
-  top: 10%;
-  left: 30%;
-  transform: translate(-50%, -50%);
+  font-size: 40px;
   padding: 10px;
   z-index: 1;
   font-family: FilsonProBold;
 }
 .apresenta p {
   font-family: FilsonProBook;
-  font-size: 1rem;
-  position: absolute;
-  top: 20%;
-  left: 34%;
-  transform: translate(-50%, -50%);
+  font-size: 1.rem;
   padding: 10px;
   z-index: 1;
 }
@@ -90,8 +80,10 @@ input {
   transition: ease-out 0.5s;
   box-shadow: 0 10px 20px -5px #3e01a7ad;
   animation: animate-gradient 5s linear infinite;
-  margin-top: 50%;
+  margin-top: 14%;
   margin-left: 4%;
+  position: absolute;
+  cursor: pointer;
 }
 input:hover {
   box-shadow: 0px 0px 35px 0px #3e01a7ad;
@@ -116,22 +108,15 @@ input:hover {
 .habilidades {
   display: flex;
   align-items: center;
-  text-align: center;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-left: 3%;
 }
 .habilidades h1 {
-  margin-top: 7%;
+  margin-top: 25%;
   margin-bottom: 10%;
   color: #fff;
   font-family: FilsonProBold;
   font-size: 2rem;
-  font-size: 2rem;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-  z-index: 1;
 }
 .habilidades .card-box {
   margin-top: 5%;
@@ -140,7 +125,7 @@ input:hover {
   position: absolute;
   margin-top: 5%;
   left: 50%;
-  top: 62%;
+  top: 500px;
   width: 80%;
   height: 20%;
   transform: translate(-50%, -50%);
