@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: FilsonProRegular;
+}
+@font-face {
+  font-family: "FilsonProRegular";
+  src: url("fonts/FilsonProRegular.otf");
+}
+@font-face {
+  font-family: "FilsonProBold";
+  src: url("fonts/FilsonProBold.otf");
+}
+@font-face {
+  font-family: "FilsonProBook";
+  src: url("fonts/FilsonProBook.otf");
+}
+body {
+  background-color: #0f0f17;
+}
+.apresenta header ul {
+  justify-content: end;
+  display: flex;
+}
+.apresenta header ul i {
+  color: #fff;
+  font-size: 2rem;
+  margin: 2%;
+}
+.apresenta .circulo {
+  position: absolute;
+  width: 1200px;
+  min-width: 1200px;
+  z-index: 0;
+  animation: girandoCirculo 20s linear infinite;
+  top: -300px;
+  left: -500px;
+  width: 900px;
+  min-width: 900px;
+}
+.apresenta .linhas {
+  position: absolute;
+  width: 2000px;
+  min-width: 2000px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 0.01;
+  width: 1500px;
+  min-width: 1500px;
+  transform: rotate(90deg);
+  left: -600px;
+  top: 50px;
+}
+.apresenta {
+  font-family: FilsonProRegular;
+  color: #fff;
+}
+.apresenta h2 {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  z-index: 1;
+  font-family: FilsonProBold;
+}
+.apresenta p {
+  font-family: FilsonProBook;
+  font-size: 1rem;
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  z-index: 1;
+}
+input {
+  color: #fff;
+  background-image: linear-gradient(45deg, #3e01a7, #eb78c7, #3e01a7, #eb78c7);
+  background-size: 400% 200%;
+  transition: background 1.6s cubic-bezier(0.55, 0.1, 0.47, 0.94) 0s;
+  border-top: none;
+  border-bottom: none;
+  padding: 15px;
+  font-weight: 600;
+  font-size: medium;
+  border-radius: 8px;
+  border: none;
+  transition: ease-out 0.5s;
+  box-shadow: 0 10px 20px -5px #3e01a7ad;
+  animation: animate-gradient 5s linear infinite;
+  margin-top: 50%;
+  margin-left: 4%;
+}
+input:hover {
+  box-shadow: 0px 0px 35px 0px #3e01a7ad;
+}
+@keyframes animate-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes girandoCirculo {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.habilidades {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.habilidades h1 {
+  margin-top: 7%;
+  margin-bottom: 10%;
+  color: #fff;
+  font-family: FilsonProBold;
+  font-size: 2rem;
+  font-size: 2rem;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  z-index: 1;
+}
+.habilidades .card-box {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: transparent;
+  position: absolute;
+  margin-top: 5%;
+  left: 50%;
+  top: 62%;
+  width: 80%;
+  height: 20%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  backdrop-filter: blur(3px);
+  border: 1px solid  #ffffff00;
+  box-shadow: 0px 0px 10px 0px #0000007a
+}
