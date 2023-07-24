@@ -26,7 +26,7 @@ body {
   overflow-x: hidden;
 }
 header {
-  padding: 3% 2% 2% 3%;
+  margin: 3% 2% 2% 3%;
 }
 header ul {
   justify-content: space-between;
@@ -48,11 +48,12 @@ header ul {
   background: #3e01a743;
   box-shadow: 0px 0px 50px 1px #4c00ce;
 }
-#menu {
-  display: none;
+#menu-icon {
   color: #fff;
-  font-size: 2rem;
-  margin: 2%;
+  font-size: 50px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
 }
 .effect .circulo {
   position: absolute;
@@ -76,23 +77,18 @@ header ul {
 .apresenta {
   font-family: FilsonProRegular;
   color: #fff;
-  padding: 0 3% 0;
-  margin: 0;
-  position: absolute;
+  margin: -35px 0;
 }
 .apresenta h2 {
   font-size: 40px;
-  padding: 10px;
-  z-index: 1;
   font-family: FilsonProBold;
 }
 .apresenta p {
   font-family: FilsonProBook;
   font-size: 1rem;
-  padding: 10px;
-  z-index: 1;
+  padding: 20px 0 30px;
 }
-input {
+.apresenta input {
   color: #fff;
   background-image: linear-gradient(45deg, #3e01a7, #a24ce9, #3e01a7, #eb78c7);
   background-size: 400% 200%;
@@ -107,8 +103,6 @@ input {
   transition: ease-out 0.5s;
   box-shadow: 0 10px 20px -5px #3e01a7ad;
   animation: animate-gradient 5s linear infinite;
-  margin-top: 12%;
-  margin-left: 4%;
   position: absolute;
   cursor: pointer;
 }
@@ -134,7 +128,9 @@ input:hover {
 }
 section {
   padding: 3%;
-  margin-top: 340px;
+}
+.habilidades{
+  margin: 70px 0;
 }
 .habilidades h1 {
   color: #fff;
@@ -147,7 +143,6 @@ section {
 .card-box {
   background: #ffffff05;
   width: 33%;
-  margin: 0 1% 0 0;
   border-radius: 15px;
   backdrop-filter: blur(3px);
   border: 1px solid #ffffff0f;
@@ -168,158 +163,111 @@ section {
   font-size: 2rem;
 }
 
-
-
-
-.icon-cards {
-  position: relative;
-	width: 60vw;
-	height: 40vw;
-  max-width: 380px;
-  max-height: 250px;
-  margin: 0;
-  color: white;
-	perspective: 1000px;
-  transform-origin: center;
-
-	&__content {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-    transform-origin: center;
-		transform-style: preserve-3d;
-		transform: translateZ(-30vw) rotateY(0);
-		animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
-    
-    &.step-animation {
-      animation: carousel 8s infinite steps(1) forwards;
-    }
-	}
-
-	&__item {
-		position: absolute;
-		top: 0;
-		left: 0;
+@media (max-width: 1425px){
+  .effect .circulo {
+    position: absolute;
+    width: 1200px;
+    min-width: 1200px;
+    z-index: 0;
+    animation: girandoCirculo 20s linear infinite;
+    top: -600px;
+    left: -500px;
+    width: 100%;
+    min-width: 900px;
+  }
+}
+@media (max-width: 1170px){
+  #menu-icon{
+    display: block;
+    margin: -20px 0;
+  }
+  .nav{
+    position: absolute;
+    height: 120vh;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: #090811;
+    gap: 0.5rem;
+    text-align: left;
+    transition: all .50s ease;
+  }
+  .nav a {
+    display: block;
+    font-size: 20px;
+    padding: 5px 0px; 
+  }
+  .nav a:hover {
+    background: none;
+    box-shadow: none;
+  }
+  .nav.open{
     right: 0;
-    bottom: 0;
-		width: 60vw;
-		height: 40vw;
-    max-width: 380px;
-    max-height: 250px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.1);
-		border-radius: 6px;
-    transform-origin: center;
-
-		&:nth-child(1) {
-			background: #FDD94F;
-			transform: rotateY(0) translateZ(35vw);
-		}
-
-		&:nth-child(2) {
-			background: #F87949;
-			transform: rotateY(120deg) translateZ(35vw);
-		}
-
-		&:nth-child(3) {
-			background: #FBAB48;
-			transform: rotateY(240deg) translateZ(35vw);
-		}
-	}
-}
-
-@keyframes carousel {
-	0%,  17.5%  { transform: translateZ(-35vw) rotateY(0); }
-	27.5%, 45%  { transform: translateZ(-35vw) rotateY(-120deg); }
-	55%, 72.5%  { transform: translateZ(-35vw) rotateY(-240deg); }
-	82.5%, 100% { transform: translateZ(-35vw) rotateY(-360deg); }
-}
-
-
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: #110F15;
-}
-
-
-.checkbox {
-  position: relative;
-  margin-top: 2rem;
-  font-size: .9rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #F47956;
-  transition: color .3s ease;
-  user-select: none;
-  
-  &:hover {
-    color: #F7A95A;
   }
-
-  
-  &__checkbox {
-    position: relative;
-    top: 0;
-    width: 1.0625rem;
-    height: 1.0625rem;
-    background: white;
-    border: 1px solid currentColor;
-    border-radius: 4px;
-    vertical-align: middle;
-    transition: background 0.1s ease;
-    cursor: pointer;
-    
-    &::after {
-      content: '';
-      position: absolute;
-      top: 1px;
-      left: 5px;
-      width: 5px;
-      height: 11px;
-      opacity: 0;
-      transform: rotate(45deg) scale(0);
-      border-right: 2px solid #fff;
-      border-bottom: 2px solid #fff;
-      transition: all 0.3s ease;
-      transition-delay: 0.15s;
-    }
+  .effect .circulo {
+    position: absolute;
+    width: 1200px;
+    min-width: 1200px;
+    z-index: 0;
+    animation: girandoCirculo 20s linear infinite;
+    top: -550px;
+    left: -500px;
+    width: 100%;
+    min-width: 900px;
   }
-  
-  
-  &__label {
-    margin-left: 5px;
-    vertical-align: middle;
-    cursor: pointer;
+}
+@media (max-width: 920px){
+  .effect .circulo {
+    position: absolute;
+    width: 900px;
+    min-width: 1200px;
+    z-index: 0;
+    animation: girandoCirculo 20s linear infinite;
+    top: -400px;
+    left: -400px;
+    width: 100%;
+    min-width: 900px;
   }
-  
-  
-  > input:checked ~ .checkbox__checkbox {
-    border-color: transparent;
-    background: #F47956;
-    animation: jelly 0.6s ease;
-
-    &:after {
-      opacity: 1;
-      transform: rotate(45deg) scale(1);
-    }
+}
+@media (max-width: 840px){
+  .effect .circulo {
+    position: absolute;
+    width: 900px;
+    min-width: 1200px;
+    z-index: 0;
+    animation: girandoCirculo 20s linear infinite;
+    top: -400px;
+    left: -400px;
+    width: 100%;
+    min-width: 900px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .habilidades{
+    margin: 100px 0;
+  }
+}
+@media (max-width: 720px){
+  .effect .circulo {
+    position: absolute;
+    width: 900px;
+    min-width: 1200px;
+    z-index: 0;
+    animation: girandoCirculo 20s linear infinite;
+    top: -400px;
+    left: -400px;
+    width: 100%;
+    min-width: 900px;
+  }
+}@media (max-width: 540px){
+  .apresenta{
+    margin-top: 0.5px;
   }
 }
 
-
-@keyframes jelly {
-  from { transform: scale(1, 1); }
-  30% { transform: scale(1.25, 0.75); }
-  40% { transform: scale(0.75, 1.25); }
-  50% { transform: scale(1.15, 0.85); }
-  65% { transform: scale(0.95, 1.05); }
-  75% { transform: scale(1.05, 0.95); }
-  to { transform: scale(1, 1); }
-}

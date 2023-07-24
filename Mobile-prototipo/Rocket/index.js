@@ -1,6 +1,13 @@
-function classToggle() {
-    var el = document.querySelector('.icon-cards__content');
-    el.classList.toggle('step-animation');
-  }
-  
-  document.querySelector('#toggle-animation').addEventListener('click', classToggle);
+
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.nav');
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('open');
+};
+
+window.onscroll = () => {
+  menu.classList.remove('bx-x');
+  navbar.classList.remove('open');
+};
