@@ -8,9 +8,6 @@
   text-decoration: none;
   font-family: FilsonProRegular;
 }
-html {
-   scroll-behavior: smooth;
- }
 :root {
   --primary: #3e01a2;
   --white: #ffffff;
@@ -32,6 +29,7 @@ main {
   font-family: "FilsonProBook";
   src: url("fonts/FilsonProBook.otf");
 }
+
 body {
   background-color: #090811;
   overflow-x: hidden;
@@ -140,7 +138,7 @@ input:hover {
 section {
   padding: 3%;
 }
-.habilidades{
+.habilidades {
   margin: 70px 0;
 }
 .habilidades h1 {
@@ -168,18 +166,9 @@ section {
   padding: 7px;
   font-size: 20px;
 }
-.projetos h1 {
-  color: #fff;
-  font-family: FilsonProBold;
-  font-size: 2rem;
-}
-
 .container {
   max-width: 124rem;
-  padding: 0 1rem;
-  margin: 0 auto;
 }
-
 .text-center {
   margin-top: 2rem;
   text-align: center;
@@ -191,73 +180,54 @@ section {
   color: var(--primary);
   padding: 2rem 0;
 }
-#projetos h1{
-  margin-top: -390px;
+#projetos h1 {
   font-size: 5rem;
 }
 #projetos {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 3% 0;
 }
 #projetos .tranding-slider {
-  height: 52rem;
   padding: 2rem 0;
   position: relative;
 }
 
 .projetos-slide {
-  width: 37rem;
-  height: 42rem;
+  width: 20rem;
+  height: 40rem;
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.info{
-  width: 35rem;
-  height: 25rem;
+.info {
+  width: 30rem;
+  height: 10rem;
   margin-top: -1rem;
-  background-color: #100F19;
+  background-color: #505050;
   border-radius: 0rem 0rem 2rem 2rem;
   box-shadow: 0 10px 20px -5px #000000ad;
 }
 .projetos-slide .slide-img img {
-  width: 35rem;
-  height: 20rem;
+  width: 30rem;
+  height: 15rem;
   border-radius: 2rem 2rem 0rem 0rem;
   object-fit: cover;
   box-shadow: 0 10px 20px -5px #000000ad;
 }
-.projetos-slide .projetos-slide-content {
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.projetos-slide-content .food-price {
+.projetos-slide-content h1{
   position: absolute;
-  top: 2rem;
-  right: 2rem;
   color: var(--white);
+  margin-left: -140px ;
 }
 
 .projetos-slide-content .projetos-slide-content-bottom {
   position: absolute;
-  bottom: 2rem;
-  left: 2rem;
   color: var(--white);
 }
-
-.food-rating {
-  padding-top: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-
 .rating ion-icon {
   color: var(--primary);
 }
@@ -269,7 +239,6 @@ section {
 
 .tranding-slider-control {
   position: relative;
-  bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -282,8 +251,6 @@ section {
 
 .tranding-slider-control .slider-arrow {
   background: var(--white);
-  width: 3.5rem;
-  height: 3.5rem;
   border-radius: 50%;
   left: 42%;
   transform: translateX(-42%);
@@ -291,12 +258,12 @@ section {
 }
 
 .tranding-slider-control .slider-arrow ion-icon {
-  font-size: 2rem;
+  font-size: 5rem;
   color: #222224;
 }
 
 .tranding-slider-control .slider-arrow::after {
-  content: '';
+  content: "";
 }
 
 .tranding-slider-control .swiper-pagination {
@@ -313,7 +280,7 @@ section {
   background: var(--primary);
 }
 
-@media (max-width: 1425px){
+@media (max-width: 1425px) {
   .effect .circulo {
     position: absolute;
     width: 1200px;
@@ -326,12 +293,12 @@ section {
     min-width: 900px;
   }
 }
-@media (max-width: 1170px){
-  #menu-icon{
+@media (max-width: 1170px) {
+  #menu-icon {
     display: block;
     margin: -20px 0;
   }
-  .nav{
+  .nav {
     position: absolute;
     height: 120vh;
     right: -100%;
@@ -340,18 +307,18 @@ section {
     background: #090811;
     gap: 0.5rem;
     text-align: left;
-    transition: all .50s ease;
+    transition: all 0.5s ease;
   }
   .nav a {
     display: block;
     font-size: 20px;
-    padding: 5px 0px; 
+    padding: 5px 0px;
   }
   .nav a:hover {
     background: none;
     box-shadow: none;
   }
-  .nav.open{
+  .nav.open {
     right: 0;
   }
   .effect .circulo {
@@ -366,7 +333,7 @@ section {
     min-width: 900px;
   }
 }
-@media (max-width: 920px){
+@media (max-width: 920px) {
   .effect .circulo {
     position: absolute;
     width: 900px;
@@ -379,7 +346,7 @@ section {
     min-width: 900px;
   }
 }
-@media (max-width: 840px){
+@media (max-width: 840px) {
   .effect .circulo {
     position: absolute;
     width: 900px;
@@ -399,11 +366,11 @@ section {
     width: 100%;
     margin-bottom: 10px;
   }
-  .habilidades{
+  .habilidades {
     margin: 100px 0;
   }
 }
-@media (max-width: 720px){
+@media (max-width: 720px) {
   .effect .circulo {
     position: absolute;
     width: 900px;
@@ -415,9 +382,9 @@ section {
     width: 100%;
     min-width: 900px;
   }
-}@media (max-width: 540px){
-  .apresenta{
+}
+@media (max-width: 540px) {
+  .apresenta {
     margin-top: 0.5px;
   }
 }
-
